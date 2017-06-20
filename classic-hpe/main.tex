@@ -228,6 +228,58 @@
 }
 
 %----------------------------------------------------------------------------------------
+%	 CV Publications
+%----------------------------------------------------------------------------------------
+
+% creates a stretched box as cv entry headline followed by two paragraphs about 
+% the work you did
+% param 1:	event time i.e. 2014 or 2011-2014 etc.
+% param 2:	event name (what did you do?)
+% param 3:	institution (where did you work / study)
+% param 4:	what was your position
+% param 5:	some words about your contributions
+%
+\newcommand{\cvpub}[4]
+{
+
+\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
+	 \textcolor{bgcol}{#2}. \textbf{\textit{#1}}. \textcolor{bgcol}{#3} & \vspace{2.5pt}\textcolor{sectcol}{#4}
+\end{tabular*}
+
+%\vspace{-8pt}
+%\textcolor{softcol}{\hrule}
+\vspace{3pt}
+
+}
+
+%----------------------------------------------------------------------------------------
+%	 CV Presentation
+%----------------------------------------------------------------------------------------
+
+% creates a stretched box as cv entry headline followed by two paragraphs about 
+% the work you did
+% param 1:	event time i.e. 2014 or 2011-2014 etc.
+% param 2:	event name (what did you do?)
+% param 3:	institution (where did you work / study)
+% param 4:	what was your position
+% param 5:	some words about your contributions
+%
+\newcommand{\cvpres}[4]
+{
+
+\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
+	 \textcolor{bgcol}{#1}. \textbf{#3}. \textcolor{bgcol}{Presented at #4} & \vspace{2.5pt}\textcolor{sectcol}{#2}
+\end{tabular*}
+
+%\vspace{-8pt}
+%\textcolor{softcol}{\hrule}
+\vspace{3pt}
+
+}
+
+%\cvpres{Farina, Matthew}{2013}{Secure Your Site}{DrupalCamp Michigan, October 12, in Ann Arbor, Michigan}
+
+%----------------------------------------------------------------------------------------
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
 
@@ -287,6 +339,34 @@
 % param 2:	event name (what did you do?)
 % param 3:	institution (where did you work / study)
 % param 4:	what was your position
+% param 5:	some words about your contributions
+% param 6:	some words about your contributions
+%
+\newcommand{\cveventfive}[8]
+{
+
+\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
+	\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
+\end{tabular*}
+
+\vspace{-8pt}
+\textcolor{softcol}{\hrule}
+\vspace{6pt}
+
+  $\cdot$ #4\\[3pt]
+  $\cdot$ #5\\[3pt]
+  $\cdot$ #6\\[3pt]
+  $\cdot$ #7\\[3pt]
+  $\cdot$ #8\\[6pt]
+
+}
+
+% creates a stretched box as cv entry headline followed by two paragraphs about 
+% the work you did
+% param 1:	event time i.e. 2014 or 2011-2014 etc.
+% param 2:	event name (what did you do?)
+% param 3:	institution (where did you work / study)
+% param 4:	what was your position
 %
 \newcommand{\cveventone}[4]
 {
@@ -300,6 +380,26 @@
 \vspace{6pt}
 
   $\cdot$ #4\\[3pt]
+
+}
+
+% creates a stretched box as cv entry headline followed by two paragraphs about 
+% the work you did
+% param 1:	event time i.e. 2014 or 2011-2014 etc.
+% param 2:	event name (what did you do?)
+% param 3:	institution (where did you work / study)
+% param 4:	what was your position
+%
+\newcommand{\cveventzero}[3]
+{
+
+\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
+	\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
+\end{tabular*}
+
+\vspace{-8pt}
+%\textcolor{softcol}{\hrule}
+\vspace{6pt}
 
 }
 
@@ -359,7 +459,7 @@
 \vspace{-8pt}
 \begin{center}
 	\HUGE \textsc{Matt Farina} \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \textsc{Resume}\\[2pt]
-	\small Software Architect, Technical Lead, and Developer
+	\small Software Architect, Technical Lead, Developer
 \end{center}
 
 
@@ -371,9 +471,9 @@
 %	META SECTION
 %----------------------------------------------------------------------------------------
 \metasection{Highland, MI, USA}{\textbf{Status:} Architect and Technical Lead at HPE}
-\metasection{www.mattfarina.com}{\textbf{Fields:} Software Architecture and Development, Developer Experience, Cloud} 
+\metasection{www.mattfarina.com}{\textbf{Fields:} Software Development, Developer Experience, Cloud, Web Performance} 
 \metasection{matt@mattfarina.com}{\textbf{Technologies:} Go, JavaScript, PHP, Microservices, Jenkins, Drone}
-\metasection{+1 (248) 388-0973}{\textbf{Cloud:} Kubernetes, Cloud Foundry, Heroku, OpenStack, AWS, Azure}
+\metasection{(248) 388-0973}{\textbf{Cloud:} Kubernetes, Cloud Foundry, Heroku, OpenStack, AWS, Azure}
 \vspace{-2pt}
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
@@ -385,7 +485,7 @@
 %----------------------------------------------------------------------------------------
 \vspace{-6pt}
 \cvsection{Summary}
-Software engineer, architect, and technical leader primarily focused on cloud applications, web applications, and services. An author, speaker, and podcaster on technology. Lead developer on several popular open source projects.\
+Software engineer, architect, and technical leader primarily focused on cloud applications, web applications, and services. An author, speaker, and podcaster on technology. Developer of multiple popular open source projects.\
 
 
 %============================================================================%
@@ -397,10 +497,10 @@ Software engineer, architect, and technical leader primarily focused on cloud ap
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
-\cvsection{Select Experience}
+\cvsection{Experience}
 
 %
-\cveventthree{June 2011 - Present}{Principal Engineer}{Hewlett Packard Enterprise (formerly Hewlett-Packard)}{Technical lead and architect in Software Defined and Cloud Group working on HPE Project New Stack}{Lead engineer on R\&D efforts that fed HPE Project New Stack as part of Advanced Technology Group}{Lead Shipment of 12 services and applications for HP's Public and Private Cloud }
+\cveventfive{June 2011 - Present}{Master Technologist}{Hewlett Packard Enterprise (formerly Hewlett-Packard)}{Technical lead and architect in Software Defined and Cloud Group working on HPE Project New Stack}{Successfully pitched the Management Service to management for HPE New Stack}{Presented HPE New Stack to The Home Depot, Cerner, and others}{Lead engineer on Picasso R\&D efforts that fed HPE Project New Stack as part of Advanced Technology Group}{Led Shipment of numerous services and applications for HP's Public and Private Cloud (e.g., Marketplace)}
 
 %\textcolor{softcol}{\hrule}
 
@@ -424,30 +524,28 @@ Software engineer, architect, and technical leader primarily focused on cloud ap
 
 %\textcolor{softcol}{\hrule}
 
-
 %
-\cvevent{Nov 2002 - Feb 2009}{Senior Engineer}{General Dynamics}{Developed a Rapid Application Development software framework and applications built on it}{Lead diagnostics, prognostics, and testability efforts for military vehicles}
-
-%---------------------------------------------------------------------------------------
-%	Projects SECTION
-%--------------------------------------------------------------------------------------
-\cvsection{Select Projects}
-
-%
-\cvevent{July 2014 - Present}{Lead Developer}{Glide, the Go package manager}{Developed core dependency management features which have been re-used by other projects}{Built the website, documentation, and install mechanism}
+\cvevent{June 2010 - March 2011}{Co-Chair of Programming}{DrupalCon Chicago}{Organized speakers, tracks, and track chairs}{Produced communications for speakers and conference attendees regarding conference content}
 
 %\textcolor{softcol}{\hrule}
 
 %
-\cveventone{March 2013 - Present}{Core Developer}{HTML5 Parser / Writer for PHP}{Built and shipped most popular HTML5 library for PHP}
+\cvevent{Feb 2009 - June 2009}{Senior Developer}{Tree House Agency}{Wrote responses to development proposal requests}{Developed and shipped client websites}
 
+%\textcolor{softcol}{\hrule}
+
+
+%
+\cvevent{Nov 2002 - Feb 2009}{Senior Engineer}{General Dynamics Land Systems}{Developed a Rapid Application Development software framework and applications built on it}{Lead diagnostics, prognostics, and testability efforts for military vehicles}
+
+%\textcolor{softcol}{\hrule}
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
 \cvsection{Education}
 
 %
-\cvevent{1997 - 2002}{Bachelor of Science, Electrical Engineering}{Michigan State University}{Developed a solar car power controller including both the hardware and software}{Focus on the design of mixed signal integrated circuits}
+\cveventzero{1997 - 2002}{Bachelor of Science, Electrical Engineering}{Michigan State University}
 
 
 %--------------------------------------------------------------------------------------------------
@@ -456,9 +554,88 @@ Software engineer, architect, and technical leader primarily focused on cloud ap
 
 \null
 \vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.mattfarina.com} $\cdot$ \textcolor{white}{github.com/mattfarina}}}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.mattfarina.com} $\cdot$ \textcolor{white}{github.com/mattfarina} $\cdot$ \textcolor{white}{linkedin.com/in/matthewfarina}}}
+\\[-6pt]
+\newpage
 
+%---------------------------------------------------------------------------------------
+%	Page 2 TITLE HEADLINE
+%----------------------------------------------------------------------------------------
+\vspace{-8pt}
+\begin{center}
+	\HUGE \textsc{Matt Farina} \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \textsc{Resume}\\[2pt]
+	\small Software Architect, Technical Lead, Developer
+\end{center}
 
+\begin{center}
+	\small \textcolor{bgcol}{www.mattfarina.com $\cdot$ matt@mattfarina.com $\cdot$ (248) 388-0973 $\cdot$ Highland, MI, USA}
+\end{center}
+
+\vspace{6pt}
+
+%---------------------------------------------------------------------------------------
+%	Projects SECTION
+%--------------------------------------------------------------------------------------
+\cvsection{Publications}
+
+\cvpub{Go in Practice}{Butcher, Matthew and Farina, Matthew}{Manning Publications}{2016}
+
+\cvpub{Big Performance Wins On The Front End}{Farina, Matthew}{Drupal Watchdog}{2011}
+
+\cvpub{Drupal 7 Module Development}{Farina, Matthew, et al}{Packt Publishing}{2010}
+
+\vspace{6pt}
+
+%---------------------------------------------------------------------------------------
+%	Projects SECTION
+%--------------------------------------------------------------------------------------
+\cvsection{Select Presentations}
+
+\cvpres{Farina, Matthew}{2016}{Dipping Your Toes Into Cloud Native Application Development}{CloudDevelop, August 26th, in Columbus, Ohio}
+
+\cvpres{Farina, Matthew}{2015}{A Dive Into Containers and Docker}{CloudDevelop, October 23, in Columbus, Ohio}
+
+\cvpres{Farina, Matthew}{2014}{Why OpenStack Matters And How You Can Get Started}{CloudDevelop, October 17, in Columbus, Ohio}
+
+\cvpres{Farina, Matthew}{2013}{Secure Your Site}{DrupalCamp Michigan, October 12, in Ann Arbor, Michigan}
+
+\cvpres{Farina, Matthew}{2012}{Faster Mobile Sites}{DrupalCon, March 19-23, in Denver, Colorado}
+
+\cvpres{Farina, Matthew and Smith, Nathan}{2012}{Using Sass \& Compass In Drupal Theming}{DrupalCon, March 19-23, in Denver, Colorado}
+
+\cvpres{Farina, Matthew and Dan Mouyard}{2011}{Faster Front End Performance}{DrupalCon, March 7-10, in Chicago, Illinoisn}
+
+\vspace{3pt}
+\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
+	\small \textcolor{bgcol}{More details and presentations available at mattfarina.com/speaking}
+\end{tabular*}
+
+\vspace{6pt}
+
+%---------------------------------------------------------------------------------------
+%	Projects SECTION
+%--------------------------------------------------------------------------------------
+\cvsection{Select Projects}
+
+\cvevent{July 2014 - Present}{Glide}{Lead Developer}{Most popular package manager for Go programming language}{Developed core components that have been reused in other tools (e.g., Kubernetes Helm)}
+
+\cvevent{March 2013 - Present}{HTML5 Parser and Writer}{Co-creator and Core Developer}{Most downloaded PHP HTML5 Parser and Writer}{Shipped with other projects (e.g., Drupal, the popular content management system)}
+
+\cveventone{2015 - Present}{Kubernetes Helm}{Contributor}{Started contributing to Helm during Helm Classic development}
+
+\cvevent{2013 - 2015}{OpenStack}{Core Developer}{Contributed to projects, such as Horizon}{Lead Software Development Kit (SDK) developer for PHP}
+
+\cvevent{2006 - 2012}{Drupal}{Core Developer}{Contributed to JavaScript handling, front end performance, User Experience, content validation, and more}{Created or contributed over 40 extension modules}
+
+\cveventone{2009 - 2010}{Farbtastic}{Lead Maintainer}{Popular color selector (e.g. used on Twitter and shipped in Drupal and Wordpress)}
+
+%--------------------------------------------------------------------------------------------------
+%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
+%--------------------------------------------------------------------------------------------------
+
+\null
+\vspace*{\fill}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.mattfarina.com} $\cdot$ \textcolor{white}{github.com/mattfarina} $\cdot$ \textcolor{white}{linkedin.com/in/matthewfarina}}}
 
 
 %============================================================================%
