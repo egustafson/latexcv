@@ -14,7 +14,7 @@
 %	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 %	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 %	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,?
 %	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 %	THE SOFTWARE.
 %	
@@ -342,7 +342,7 @@
 % param 5:	some words about your contributions
 % param 6:	some words about your contributions
 %
-\newcommand{\cveventfive}[8]
+\newcommand{\cveventsix}[9]
 {
 
 \begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
@@ -357,7 +357,8 @@
   $\cdot$ #5\\[3pt]
   $\cdot$ #6\\[3pt]
   $\cdot$ #7\\[3pt]
-  $\cdot$ #8\\[6pt]
+  $\cdot$ #8\\[3pt]
+  $\cdot$ #9\\[6pt]
 
 }
 
@@ -434,10 +435,11 @@
 %============================================================================%
 \begin{document}
 
-
 %use our custom fancy header definitions
-\pagestyle{fancy}	
-
+\pagestyle{fancy}
+%\fancyhf{}
+%\renewcommand\headrulewidth{0pt}
+%\cfoot{\small{www.linkedin.com/in/matthewfarina} $\cdot$ \small{www.mattfarina.com}}
 
 
 
@@ -458,11 +460,11 @@
 %----------------------------------------------------------------------------------------
 \vspace{-8pt}
 \begin{center}
-	\HUGE \textsc{Matt Farina} \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \textsc{Resume}\\[2pt]
+	\HUGE \textsc{Matt Farina}\\[2pt]
 	\small Software Architect, Technical Lead, Developer
 \end{center}
 
-
+\textcolor{sectcol}{\hrule}
 
 \vspace{6pt}
 
@@ -470,12 +472,12 @@
 %---------------------------------------------------------------------------------------
 %	META SECTION
 %----------------------------------------------------------------------------------------
-\metasection{Highland, MI, USA}{\textbf{Status:} Architect and Technical Lead at HPE}
+\metasection{Highland, MI, USA}{\textbf{LinkedIn:} www.linkedin.com/in/matthewfarina}
 \metasection{www.mattfarina.com}{\textbf{Fields:} Software Development, Developer Experience, Cloud, Web Performance} 
 \metasection{matt@mattfarina.com}{\textbf{Technologies:} Go, JavaScript, PHP, Microservices, Jenkins, Drone}
 \metasection{(248) 388-0973}{\textbf{Cloud:} Kubernetes, Cloud Foundry, Heroku, OpenStack, AWS, Azure}
-\vspace{-2pt}
-\textcolor{softcol}{\hrule}
+\vspace{-4pt}
+\textcolor{sectcol}{\hrule}
 \vspace{6pt}
 
 \normalsize
@@ -500,9 +502,17 @@ Software engineer, architect, and technical leader primarily focused on cloud ap
 \cvsection{Experience}
 
 %
-\cveventfive{June 2011 - Present}{Master Technologist}{Hewlett Packard Enterprise (formerly Hewlett-Packard)}{Technical lead and architect in Software Defined and Cloud Group working on HPE Project New Stack}{Successfully pitched the Management Service to management for HPE New Stack}{Presented HPE New Stack to The Home Depot, Cerner, and others}{Lead engineer on Picasso R\&D efforts that fed HPE Project New Stack as part of Advanced Technology Group}{Led Shipment of numerous services and applications for HP's Public and Private Cloud (e.g., Marketplace)}
+\cveventsix{June 2011 - June 2017}{Principal Engineer}{Hewlett Packard Enterprise (formerly Hewlett-Packard)}{Technical lead and architect in Software Defined and Cloud Group working on HPE Project New Stack}
+{Architected and delivered OpenStack based HP Public Cloud Marketplace}
+{Lead engineer on R\&D efforts that fed HPE Project New Stack as part of Advanced Technology Group}
+{Led delivery of 2/3 of websites and web applications for the HP Public Cloud leveraging Cloud Foundry}
+{Successfully pitched product direction ideas to executive leadership}
+{Presented products and solutions to Fortune 500 customers}
 
 %\textcolor{softcol}{\hrule}
+
+%
+\cvevent{May 2016 - Present}{Co-lead SIG Apps}{Kubernetes Project}{Organize and run weekly Special Interest Group (SIG) meetings}{Mentor numerous Kubernetes related projects to improve their development}
 
 %
 \cvevent{April 2014 - Present}{Vice Chairman of the Board}{Enjoy Creativity}{Enjoy Creativity is a non-Profit technology organization serving other non-profits}{Collaborated with the Executive Director on the vision and direction}
@@ -513,9 +523,6 @@ Software engineer, architect, and technical leader primarily focused on cloud ap
 \cvevent{May 2016 - Present}{Mentor}{TechStars Mobility}{Provided targeted guidance for numerous early stage mobility startups}{Suggested potential partnerships for startups, some of which came to fruition}
 
 %\textcolor{softcol}{\hrule}
-
-%
-\cvevent{May 2016 - Present}{Co-lead SIG Apps}{Kubernetes Project}{Organized and ran weekly Special Interest Group (SIG) meetings}{Mentored numerous Kubernetes related projects to improve their development}
 
 %\textcolor{softcol}{\hrule}
 
@@ -552,10 +559,10 @@ Software engineer, architect, and technical leader primarily focused on cloud ap
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
 %--------------------------------------------------------------------------------------------------
 
-\null
-\vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.mattfarina.com} $\cdot$ \textcolor{white}{github.com/mattfarina} $\cdot$ \textcolor{white}{linkedin.com/in/matthewfarina}}}
-\\[-6pt]
+%\null
+%\vspace*{\fill}
+%\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{sectcol}{www.mattfarina.com} $\cdot$ \textcolor{white}{github.com/mattfarina} $\cdot$ \textcolor{white}{linkedin.com/in/matthewfarina}}}
+%\\[-6pt]
 \newpage
 
 %---------------------------------------------------------------------------------------
@@ -563,7 +570,7 @@ Software engineer, architect, and technical leader primarily focused on cloud ap
 %----------------------------------------------------------------------------------------
 \vspace{-8pt}
 \begin{center}
-	\HUGE \textsc{Matt Farina} \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \textsc{Resume}\\[2pt]
+	\HUGE \textsc{Matt Farina}\\[2pt]
 	\small Software Architect, Technical Lead, Developer
 \end{center}
 
@@ -633,9 +640,9 @@ Software engineer, architect, and technical leader primarily focused on cloud ap
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
 %--------------------------------------------------------------------------------------------------
 
-\null
-\vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.mattfarina.com} $\cdot$ \textcolor{white}{github.com/mattfarina} $\cdot$ \textcolor{white}{linkedin.com/in/matthewfarina}}}
+%\null
+%\vspace*{\fill}
+%\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.mattfarina.com} $\cdot$ \textcolor{white}{github.com/mattfarina} $\cdot$ \textcolor{white}{linkedin.com/in/matthewfarina}}}
 
 
 %============================================================================%

@@ -1,13 +1,23 @@
 
-# latexcv - LaTex CV and Resume Collection
+# latexcv - LaTex CV and Resume Example
 
 ## Summary
 
-A collection of simple and easy to use, yet powerful LaTex templates for CV and resume. All of them are self designed and self implemented and not copied from template collections.
+This is based on the LaTex Resumes at https://github.com/jankapunkt/latexcv. Before
+you start here it's worth reading those.
 
-If there are any problems, please create an issue. I will fix it asap. Contributors are very welcome.
+The resumes here are different from https://github.com/jankapunkt/latexcv in the
+following ways:
 
-[See the preview / example outputs](https://github.com/jankapunkt/latexcv#gallery)
+* Only the classing and Infographics are present
+* There are online and print versions. The print versions have minor structure
+modifications to accomodate paper (e.g., no blue background on the infographic)
+* There is a classic two page example along with the one page. It's meant to be
+printed front and back
+* On the classic two page resume there accomodations for publication and presentation
+areas
+
+Want to give a shout out to @jankapunkt for a great template.
 
 
 ## How to build?
@@ -26,6 +36,7 @@ There are just few requirements:
 The MIT License (MIT)
 
 Copyright (c) 2014-2017 Jan Küster
+Copyright (c) 2017 Matt Farina
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -41,18 +52,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-
-## Gallery
-
-### Classic
-
-![Modern cv preview image](http://jankuester.com/wp-content/uploads/main_preview.png "Modern CV example preview")
-
-### Modern
-
-![Modern cv preview image](http://jankuester.com/wp-content/uploads/main_preview-1.png "Modern CV example preview")
-
-### Infographics
-
-![Infographics preview image](http://jankuester.com/wp-content/uploads/infographics-cv.png "Infographics CV example preview")
