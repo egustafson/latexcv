@@ -9,7 +9,7 @@
 %	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 %	copies of the Software, and to permit persons to whom the Software is
 %	furnished to do so, subject to the following conditions:
-%	
+%
 %	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 %	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 %	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -36,7 +36,7 @@
 %============================================================================%
 
 %we use article class because we want to fully customize the page
-\documentclass[10pt,A4]{article}	
+\documentclass[10pt,letter]{article}
 
 
 %----------------------------------------------------------------------------------------
@@ -44,7 +44,7 @@
 %----------------------------------------------------------------------------------------
 
 %we use utf8 since we want to build from any machine
-\usepackage[utf8]{inputenc}		
+\usepackage[utf8]{inputenc}
 
 %----------------------------------------------------------------------------------------
 %	LOGIC
@@ -66,14 +66,14 @@
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
 %\usepackage[light,math]{iwona}
-%\usepackage[thin]{roboto} 
+%\usepackage[thin]{roboto}
 
 % set font default
-\renewcommand*\familydefault{\sfdefault} 	
+\renewcommand*\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
 
 % more font size definitions
-\usepackage{moresize}		
+\usepackage{moresize}
 
 % awesome font
 \usepackage{fontawesome}
@@ -84,20 +84,20 @@
 %----------------------------------------------------------------------------------------
 
 %debug page outer frames
-%\usepackage{showframe}			
+%\usepackage{showframe}
 
 %define page styles using geometry
-\usepackage[a4paper]{geometry}		
+\usepackage[a4paper]{geometry}
 
 % for example, change the margins to 2 inches all round
-\geometry{top=1cm, bottom=1cm, left=1cm, right=1cm} 	
+\geometry{top=1cm, bottom=1cm, left=1cm, right=1cm}
 
 % use customized header
-\usepackage{fancyhdr}				
+\usepackage{fancyhdr}
 \pagestyle{fancy}
 
 %less space between header and content
-\setlength{\headheight}{-5pt}		
+\setlength{\headheight}{-5pt}
 
 % customize header entries
 \lhead{}
@@ -109,7 +109,7 @@
 
 %----------------------------------------------------------------------------------------
 %	TABLE /ARRAY DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 %extended aligning of tabular cells
 \usepackage{array}
@@ -121,7 +121,7 @@
 
 %----------------------------------------------------------------------------------------
 %	GRAPHICS DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 \usepackage{graphicx}
 \usepackage{wrapfig}
@@ -143,7 +143,7 @@
 
 %----------------------------------------------------------------------------------------
 %	ICON-SET EMBEDDING
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 % at this point we simplify our icon-embedding by simply referring to a set of png images.
 % if you find a good way of including svg without conflicting with other packages you can
@@ -155,7 +155,7 @@
 
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 \usepackage{color}
 
@@ -187,16 +187,16 @@
 %----------------------------------------------------------------------------------------
 
 % remove top header line
-\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\headrulewidth}{0pt}
 
 %remove botttom header line
-\renewcommand{\footrulewidth}{0pt}	  	
+\renewcommand{\footrulewidth}{0pt}
 
 %remove pagenum
-\renewcommand{\thepage}{}	
+\renewcommand{\thepage}{}
 
-%remove section num		
-\renewcommand{\thesection}{}			
+%remove section num
+\renewcommand{\thesection}{}
 
 
 %----------------------------------------------------------------------------------------
@@ -206,7 +206,7 @@
 %----------------------------------------------------------------------------------------
 
 % a six pointed arrow poiting to the left
-\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}	
+\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}
 
 % a six pointed arrow poiting to the right
 \newcommand{\tzrarrow}{ (0,0.2) -- (0.1,0) -- (0.3,0) -- (0.2,0.2) -- (0.3,0.4) -- (0.1,0.4) -- cycle;}
@@ -294,7 +294,7 @@
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
 
-% creates a stretched box as 
+% creates a stretched box as
 \newcommand{\cveventmeta}[2] {
 	\mbox{\mystrut \hspace{87pt}\textit{#1}}\\
 	#2
@@ -329,10 +329,10 @@
 %
 %============================================================================%
 \begin{document}
-\cfoot{\small{www.linkedin.com/in/matthewfarina} $\cdot$ \small{www.mattfarina.com}}
+\cfoot{\small{www.linkedin.com/in/ericggustafson} $\cdot$ \small{www.elfwerks.org/ericg}}
 
 %use our custom fancy header definitions
-\pagestyle{fancy}	
+\pagestyle{fancy}
 
 
 %----------------------------------------------------------------------------------------
@@ -343,18 +343,18 @@
 
 \begin{tabular*}{1\textwidth}{ c c c}
 	\parbox[c]{0.4\linewidth}{
-		\colorbox{thirdcol}{\HUGE{\textcolor{white}{\textbf{\uppercase{Matt Farina}}} }}\\
+		\colorbox{thirdcol}{\HUGE{\textcolor{white}{\textbf{\uppercase{Eric Gustafson}}} }}\\
 		\Large{\textcolor{thirdcol}{\textsc{Lead \& Software Engineer}}}\\
 	}&
 	\parbox{0.25\textwidth}{
-	\icontext{MapMarker}{12}{Highland, MI, USA}\\
-	\icontext{MobilePhone}{12}{(248) 388-0973}\\
-	\icontext{Send}{12}{matt@mattfarina.com}\\
+	\icontext{MapMarker}{12}{Colorado Springs, CO, USA}\\
+	\icontext{MobilePhone}{12}{+1.719.359.4112}\\
+	\icontext{Send}{12}{ericg@elfwerks.org}\\
 	}&
 	\parbox{0.3\textwidth}{
-	\icontext{MousePointer}{12}{www.mattfarina.com}\\
-	\icontext{Github}{12}{github.com/mattfarina}\\
-	\icontext{Twitter}{12}{@mattfarina}\\
+	\icontext{MousePointer}{12}{www.elfwerks.org/ericg}\\
+	\icontext{Github}{12}{github.com/egustafson}\\
+	\icontext{Twitter}{12}{@elfwerks}\\
 	}
 \end{tabular*}
 
@@ -384,13 +384,13 @@
 		% TEXT BOX
 		\parbox[b][150pt][c]{0.30\textwidth}{
 			\textcolor{textcol}{A focus on producing high functioning teams, in addition to Research and Development.}\\
-		
+
 			% LANGUAGES
 		%	\cvsect{Containers}{0.49}{thirdcol}{textcol}\\[4pt]
 		%	\icontext{Cloud}{12}{\colorbox{maincol}{Kubernetes}}\\
 		%	\icontext{Cogs}{12}{\colorbox{maincol}{Docker}}\\
 		}
-		
+
 
 		% PIE CHART
 		\begin{piechart}{360}{2}{bgcol}{textcol}{sectcol}
@@ -400,7 +400,7 @@
 			\slice{20}{Architecture}{secondcol}
 			\slice{25}{Development}{maincol}
 		\end{piechart}\\
-		
+
 	}
 	\begin{center}
 	\begin{tikzpicture}
@@ -433,10 +433,10 @@
 		\parbox[b][2cm][c]{1.7cm}{
 			\textcolor{textcol}{Current\\development toolchain}
 		}\hspace{12pt}
-		\bubbles{4/VS Code, 6/Glide, 4/git, 3/Docker, 4/Drone CI, 3/K8s\textbackslash Helm}{\cvsection{Technologies}}		
+		\bubbles{4/VS Code, 6/Glide, 4/git, 3/Docker, 4/Drone CI, 3/K8s\textbackslash Helm}{\cvsection{Technologies}}
 	}
 	\end{center}
-	
+
 %----------------------------------------------------------------------------------------
 %	FACTS
 %----------------------------------------------------------------------------------------
@@ -469,7 +469,7 @@
 %----------------------------------------------------------------------------------------
 	\cvsect{Internet And Web}{0.49}{thirdcol}{textcol}\\[20pt]
 	\mbox{
-		
+
 		% FACT BUBBLE
 		\parbox[b][3cm][c]{3cm}{
 			\factbubble{\HUGE{\textcolor{sectcol}{\textbf{21}}}\\\large{\textcolor{sectcol}{\textbf{years}}}}{0.85}{maincol}{sectcol}{thirdcol}\\
@@ -486,8 +486,7 @@
 		\squares{20/Dev Tools,40/Services,20/Front-End,10/UX \& Design}{1}
 	}
 	%\vspace{1pt}
-	
-	
+
 \end{minipage}
 \begin{minipage}{0.05\textwidth}
 	\begin{center}

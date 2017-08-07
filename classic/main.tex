@@ -9,7 +9,7 @@
 %	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 %	copies of the Software, and to permit persons to whom the Software is
 %	furnished to do so, subject to the following conditions:
-%	
+%
 %	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 %	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 %	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -17,7 +17,7 @@
 %	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 %	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 %	THE SOFTWARE.
-%	
+%
 %
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
@@ -29,7 +29,7 @@
 %============================================================================%
 
 %we use article class because we want to fully customize the page and dont use a cv template
-\documentclass[10pt,A4]{article}	
+\documentclass[10pt]{article}
 
 
 %----------------------------------------------------------------------------------------
@@ -37,7 +37,7 @@
 %----------------------------------------------------------------------------------------
 
 %we use utf8 since we want to build from any machine
-\usepackage[utf8]{inputenc}		
+\usepackage[utf8]{inputenc}
 
 %----------------------------------------------------------------------------------------
 %	LOGIC
@@ -59,14 +59,14 @@
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
 %\usepackage[light,math]{iwona}
-%\usepackage[thin]{roboto} 
+%\usepackage[thin]{roboto}
 
 % set font default
-\renewcommand*\familydefault{\sfdefault} 	
+\renewcommand*\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
 
 % more font size definitions
-\usepackage{moresize}		
+\usepackage{moresize}
 
 
 %----------------------------------------------------------------------------------------
@@ -74,21 +74,21 @@
 %----------------------------------------------------------------------------------------
 
 %debug page outer frames
-%\usepackage{showframe}			
+%\usepackage{showframe}
 
 
 %define page styles using geometry
-\usepackage[a4paper]{geometry}		
+\usepackage[letterpaper]{geometry}
 
 % for example, change the margins to 2 inches all round
-\geometry{top=1.25cm, bottom=-.6cm, left=1.5cm, right=1.5cm} 	
+\geometry{top=1.25cm, bottom=-.6cm, left=1.5cm, right=1.5cm}
 
 %use customized header
-\usepackage{fancyhdr}				
+\usepackage{fancyhdr}
 \pagestyle{fancy}
 
 %less space between header and content
-\setlength{\headheight}{-5pt}		
+\setlength{\headheight}{-5pt}
 
 
 %customize entries left, center and right
@@ -102,10 +102,10 @@
 
 %----------------------------------------------------------------------------------------
 %	TABLE /ARRAY DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 %for layouting tables
-\usepackage{multicol}			
+\usepackage{multicol}
 \usepackage{multirow}
 
 %extended aligning of tabular cells
@@ -117,7 +117,7 @@
 
 %----------------------------------------------------------------------------------------
 %	GRAPHICS DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 %for header image
 \usepackage{graphicx}
@@ -125,17 +125,17 @@
 %for floating figures
 \usepackage{wrapfig}
 \usepackage{float}
-%\floatstyle{boxed} 
+%\floatstyle{boxed}
 %\restylefloat{figure}
 
-%for drawing graphics		
-\usepackage{tikz}				
+%for drawing graphics
+\usepackage{tikz}
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
 
 
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 \usepackage{color}
 
@@ -162,23 +162,23 @@
 %----------------------------------------------------------------------------------------
 
 % remove top header line
-\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\headrulewidth}{0pt}
 
 %remove botttom header line
-\renewcommand{\footrulewidth}{0pt}	  	
+\renewcommand{\footrulewidth}{0pt}
 
 %remove pagenum
-\renewcommand{\thepage}{}	
+\renewcommand{\thepage}{}
 
-%remove section num		
-\renewcommand{\thesection}{}			
+%remove section num
+\renewcommand{\thesection}{}
 
 %----------------------------------------------------------------------------------------
 % 	ARROW GRAPHICS in Tikz
 %----------------------------------------------------------------------------------------
 
 % a six pointed arrow poiting to the left
-\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}	
+\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}
 
 % include the left arrow into a tikz picture
 % param1: fill color
@@ -231,7 +231,29 @@
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
 
-% creates a stretched box as cv entry headline followed by two paragraphs about 
+% creates a stretched box as cv entry headline followed by two paragraphs about
+% the work you did
+% param 1:	event time i.e. 2014 or 2011-2014 etc.
+% param 2:	event name (what did you do?)
+% param 3:	institution (where did you work / study)
+% param 4:	what was your position
+%
+\newcommand{\cveventone}[4]
+{
+
+\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
+	\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
+\end{tabular*}
+
+\vspace{-8pt}
+\textcolor{softcol}{\hrule}
+\vspace{6pt}
+
+  $\cdot$ #4\\[3pt]
+
+}
+
+% creates a stretched box as cv entry headline followed by two paragraphs about
 % the work you did
 % param 1:	event time i.e. 2014 or 2011-2014 etc.
 % param 2:	event name (what did you do?)
@@ -239,7 +261,7 @@
 % param 4:	what was your position
 % param 5:	some words about your contributions
 %
-\newcommand{\cvevent}[5]
+\newcommand{\cveventtwo}[5]
 {
 
 \begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
@@ -255,7 +277,7 @@
 
 }
 
-% creates a stretched box as cv entry headline followed by two paragraphs about 
+% creates a stretched box as cv entry headline followed by two paragraphs about
 % the work you did
 % param 1:	event time i.e. 2014 or 2011-2014 etc.
 % param 2:	event name (what did you do?)
@@ -281,29 +303,7 @@
 
 }
 
-% creates a stretched box as cv entry headline followed by two paragraphs about 
-% the work you did
-% param 1:	event time i.e. 2014 or 2011-2014 etc.
-% param 2:	event name (what did you do?)
-% param 3:	institution (where did you work / study)
-% param 4:	what was your position
-%
-\newcommand{\cveventone}[4]
-{
-
-\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
-	\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
-\end{tabular*}
-
-\vspace{-8pt}
-\textcolor{softcol}{\hrule}
-\vspace{6pt}
-
-  $\cdot$ #4\\[3pt]
-
-}
-
-% creates a stretched box as 
+% creates a stretched box as
 \newcommand{\cveventmeta}[2]
 {
 	\mbox{\mystrut \hspace{87pt}\textit{#1}}\\
@@ -336,7 +336,7 @@
 
 
 %use our custom fancy header definitions
-\pagestyle{fancy}	
+\pagestyle{fancy}
 
 
 
@@ -358,8 +358,10 @@
 %----------------------------------------------------------------------------------------
 \vspace{-8pt}
 \begin{center}
-	\HUGE \textsc{Matt Farina} \textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \textsc{Resume}\\[2pt]
-	\small Software Architect, Technical Lead, and Developer
+	\HUGE \textsc{Eric Gustafson}
+          %\textcolor{sectcol}{\rule[-1mm]{1mm}{0.9cm}} \textsc{Resume}
+          \\[4pt]
+	\small Software Architect | Technology Leader | Cloud Native | DevOps | Monitoring | Networking
 \end{center}
 
 
@@ -370,10 +372,17 @@
 %---------------------------------------------------------------------------------------
 %	META SECTION
 %----------------------------------------------------------------------------------------
-\metasection{Highland, MI, USA}{\textbf{Status:} Architect and Technical Lead at HPE}
-\metasection{www.mattfarina.com}{\textbf{Fields:} Software Architecture and Development, Developer Experience, Cloud} 
-\metasection{matt@mattfarina.com}{\textbf{Technologies:} Go, JavaScript, PHP, Microservices, Jenkins, Drone}
-\metasection{+1 (248) 388-0973}{\textbf{Cloud:} Kubernetes, Cloud Foundry, Heroku, OpenStack, AWS, Azure}
+\metasection{Colorado Springs, CO, USA}
+            {\textbf{Status:} Architect and Technical Leader at HPE}
+\metasection{www.elfwerks.org/ericg}
+            {\textbf{Fields:} Software Architecture and Development,
+              Cloud, Monitoring, Networking, DevOps}
+\metasection{ericg@elfwerks.org}
+            {\textbf{Technologies:} Go, Python, Java, C/C++, Ansible,
+              Chef, Nagios/Icinga, ELK, Hadoop, Kafka, RabbitMQ, ZeroMQ}
+\metasection{+1.719.359.4112}
+            {\textbf{Cloud:} Microservices, Kubernetes, Rancher,
+              CoreOS, OpenStack, AWS, Google} 
 \vspace{-2pt}
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
@@ -385,8 +394,10 @@
 %----------------------------------------------------------------------------------------
 \vspace{-6pt}
 \cvsection{Summary}
-Software engineer, architect, and technical leader primarily focused on cloud applications, web applications, and services. An author, speaker, and podcaster on technology. Lead developer on several popular open source projects.\
-
+Agile, detail oriented, hands-on technology leader with excellent
+communication skills.  Extensive experience in Cloud native
+development and operation, DevOps, System Management, Monitoring,
+Networking and Messaging.
 
 %============================================================================%
 %
@@ -397,66 +408,88 @@ Software engineer, architect, and technical leader primarily focused on cloud ap
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
-\cvsection{Select Experience}
+\cvsection{Professional Experience}
 
 %
-\cveventthree{June 2011 - Present}{Principal Engineer}{Hewlett Packard Enterprise (formerly Hewlett-Packard)}{Technical lead and architect in Software Defined and Cloud Group working on HPE Project New Stack}{Lead engineer on R\&D efforts that fed HPE Project New Stack as part of Advanced Technology Group}{Lead Shipment of 12 services and applications for HP's Public and Private Cloud }
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{April 2014 - Present}{Vice Chairman of the Board}{Enjoy Creativity}{Enjoy Creativity is a non-Profit technology organization serving other non-profits}{Collaborated with the Executive Director on the vision and direction}
-
-%\textcolor{softcol}{\hrule}
+\cveventthree{2016 - 2017}{Architect}{Software Defined \& Cloud Group, Hewlett Packard Enterprise (HPE)}
+{Design and development of HPE's project 'New Stack' -- a continuation of the R\&D effort done under the ATG.}
+{Kubernetes connector -- software networking technology that enables communication between K8s clusters.}
+{Assess and set technical direction for components in 'New Stack', including API Gateway, Monitoring, and Analytics.}
 
 %
-\cvevent{May 2016 - Present}{Mentor}{TechStars Mobility}{Provided targeted guidance for numerous early stage mobility startups}{Suggested potential partnerships for startups, some of which came to fruition}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{May 2016 - Present}{Co-lead SIG Apps}{Kubernetes Project}{Organized and ran weekly Special Interest Group (SIG) meetings}{Mentored numerous Kubernetes related projects to improve their development}
-
-%\textcolor{softcol}{\hrule}
+\cveventtwo{2014 - 2016}{Principal Engineer}{Advanced Technology Group for Cloud and Open Source, HPE}
+{Incubate and influence new technology adoption across HPE with an
+  emphasis on Cloud focused business units.}
+{Kubernetes, CoreOS, nesting Container \& VM env's, System Mgmt \& Mon, Ansible, ELK, Load Balancing, IPv6}
 
 %
-\cvevent{June 2009 - June 2011}{Senior Front-End Developer, Engineer and Team Lead}{Palantir.net}{Lead development of and shipped customer websites and web applications}{Developed new open source technologies (e.g, decentralized calendar management)}
-
-%\textcolor{softcol}{\hrule}
-
+\cveventtwo{2011 - 2014}{Engineering Manager}{Monitoring, HP Cloud, Hewlett-Packard}
+{Lead the design and operation of HP's Public Cloud (internal) monitoring and
+  customer Monitoring-aaS.}
+{Cloud Native \& DevOps, OpenStack( Nova, Swift, Glance, pre-Neutron
+  ), Chef, collectd, RabbitMQ, Icinga, HAProxy}
 
 %
-\cvevent{Nov 2002 - Feb 2009}{Senior Engineer}{General Dynamics}{Developed a Rapid Application Development software framework and applications built on it}{Lead diagnostics, prognostics, and testability efforts for military vehicles}
+\cveventtwo{2005 - 2011}{Principal Engineer}{HP Music \& Melodeo}
+{Responsible for multiple, back-end components in the Melodeo service:
+  music ingestion, transcoding, and delivery.}
+{Amazon-WS( EC2, S3, SQS, EMR, RDS ), Java, Python, Ruby, elastic
+  transcoding, music CODEC's, Hadoop/HIVE}
+
+%
+\cveventtwo{2003 - 2005}{Principal Engineer}{Continuous Computing}
+{Developed ARM \& x86 firmware/BIOS for multiple lines of blade
+  servers.  Chassis managment module dev.}
+{ARM \& x86 assembly, PXE, embedded Linux \& kernel development,
+  remote GDB, BusyBox, Python, GCC x-compile}
+
+\cveventtwo{1995 - 2003}{Software Engineer}{\it various employeers}
+           {Voice over IP, CPLD Partition, Place, \& Route (CAD/EDA),
+             Criminal Link Analysis, Remote Medical Coding.}
+           {C++, CORBA, distributed \& network programming, heuristic
+             algorithms, Data Center scale networking.}
 
 %---------------------------------------------------------------------------------------
 %	Projects SECTION
 %--------------------------------------------------------------------------------------
-\cvsection{Select Projects}
-
+%\cvsection{Select Projects}
 %
-\cvevent{July 2014 - Present}{Lead Developer}{Glide, the Go package manager}{Developed core dependency management features which have been re-used by other projects}{Built the website, documentation, and install mechanism}
-
-%\textcolor{softcol}{\hrule}
-
+%%
+%\cveventtwo{July 2014 - Present}{Lead Developer}{Glide, the Go package manager}{Developed core dependency management features which have been re-used by other projects}{Built the website, documentation, and install mechanism}
 %
-\cveventone{March 2013 - Present}{Core Developer}{HTML5 Parser / Writer for PHP}{Built and shipped most popular HTML5 library for PHP}
-
+%%\textcolor{softcol}{\hrule}
+%
+%%
+%\cveventone{March 2013 - Present}{Core Developer}{HTML5 Parser / Writer for PHP}{Built and shipped most popular HTML5 library for PHP}
+%
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
 \cvsection{Education}
 
 %
-\cvevent{1997 - 2002}{Bachelor of Science, Electrical Engineering}{Michigan State University}{Developed a solar car power controller including both the hardware and software}{Focus on the design of mixed signal integrated circuits}
+\cveventtwo{1989 - 1993}
+           {Bachelor of Science, Computer Engineering}
+           {Valparaiso University}
+           {Ada language research enabling cross-host communication
+             using language primitives - drove changes in ADA95}
+           {Focus on embedded system design (68k), networking, and
+             VLSI design}
 
+\cveventtwo{1993-1995}
+           {Masters of Science, Electrical Engineering {\it
+               unconferred} }
+           {Universities of Colorado \& Houston}
+           {aaa}
+           {bbb}
 
 %--------------------------------------------------------------------------------------------------
-%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
+%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth)
 %--------------------------------------------------------------------------------------------------
 
 \null
 \vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.mattfarina.com} $\cdot$ \textcolor{white}{github.com/mattfarina}}}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.elfwerks.org/ericg} $\cdot$ \textcolor{white}{github.com/egustafson}}}
 
 
 
