@@ -3,13 +3,29 @@
 
 ## Summary
 
-This is based on the LaTex Resumes at https://github.com/jankapunkt/latexcv. Before
-you start here it's worth reading those.
+This is based on the LaTex Resumes at
+https://github.com/mattfarina/latexcv, which is in turn derived from
+https://github.com/jankapunkt/latexcv. Before you start here it's
+worth reading those.
+
+I, (EG), modified mattfarina/latexcv in the following ways:
+
+* Converted from A4 to (US) Letter, and cm to in.  Positining was
+  somewhat "eyeballed.
+* Changed the spacing for the \cvevent{one,two,three} and the footer
+  to correspond to US-Letter.
+* Changed the colors to be darker which allowed paper print rendering
+  that was more easily read.  Unfortunately, the new colors are less
+  contrasting on (my) display. [I'm no color guru, these were eyeballed.]
+* The infographic is unchanged with respect to spacing, it's still
+  A4.  (currently)
+
+(Matt's comments/changes below)
 
 The resumes here are different from https://github.com/jankapunkt/latexcv in the
 following ways:
 
-* Only the classing and Infographics are present
+* Only the classic and Infographics are present
 * There are online and print versions. The print versions have minor structure
 modifications to accomodate paper (e.g., no blue background on the infographic)
 * There is a classic two page example along with the one page. It's meant to be
@@ -37,6 +53,7 @@ The MIT License (MIT)
 
 Copyright (c) 2014-2017 Jan Küster
 Copyright (c) 2017 Matt Farina
+Copyright (c) 2017 Eric Gustafson
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -44,7 +61,7 @@ in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
-	
+
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
