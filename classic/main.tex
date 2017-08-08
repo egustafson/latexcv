@@ -80,8 +80,8 @@
 %define page styles using geometry
 \usepackage[letterpaper]{geometry}
 
-% for example, change the margins to 2 inches all round
-\geometry{top=1.25cm, bottom=-.6cm, left=1.5cm, right=1.5cm}
+% Adjust the margins - roughly 1/2 in all around
+\geometry{top=0.5in, bottom=-0.24in, left=0.5in, right=0.5in}
 
 %use customized header
 \usepackage{fancyhdr}
@@ -241,7 +241,7 @@
 \newcommand{\cveventone}[4]
 {
 
-\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
+\begin{tabular*}{1\textwidth}{p{6.15in}  x{1in}}
 	\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
 \end{tabular*}
 
@@ -261,10 +261,34 @@
 % param 4:	what was your position
 % param 5:	some words about your contributions
 %
+%\newcommand{\cveventtwo}[5]
+%{
+%
+%\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
+%	\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
+%\end{tabular*}
+%
+%\vspace{-8pt}
+%\textcolor{softcol}{\hrule}
+%\vspace{6pt}
+%
+%  $\cdot$ #4\\[3pt]
+%  $\cdot$ #5\\[6pt]
+%
+%}
+
+% creates a stretched box as cv entry headline followed by two paragraphs about
+% the work you did
+% param 1:	event time i.e. 2014 or 2011-2014 etc.
+% param 2:	event name (what did you do?)
+% param 3:	institution (where did you work / study)
+% param 4:	what was your position
+% param 5:	some words about your contributions
+%
 \newcommand{\cveventtwo}[5]
 {
 
-\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
+\begin{tabular*}{1\textwidth}{p{6.15in}  x{1in}}
 	\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
 \end{tabular*}
 
@@ -289,7 +313,7 @@
 \newcommand{\cveventthree}[6]
 {
 
-\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
+\begin{tabular*}{1\textwidth}{p{6.15in}  x{1in}}
 	\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
 \end{tabular*}
 
@@ -382,7 +406,7 @@
               Chef, Nagios/Icinga, ELK, Hadoop, Kafka, RabbitMQ, ZeroMQ}
 \metasection{+1.719.359.4112}
             {\textbf{Cloud:} Microservices, Kubernetes, Rancher,
-              CoreOS, OpenStack, AWS, Google} 
+              CoreOS, OpenStack, AWS, Google}
 \vspace{-2pt}
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
@@ -417,37 +441,39 @@ Networking and Messaging.
 {Assess and set technical direction for components in 'New Stack', including API Gateway, Monitoring, and Analytics.}
 
 %
-\cveventtwo{2014 - 2016}{Principal Engineer}{Advanced Technology Group for Cloud and Open Source, HPE}
+\cveventtwo{2014 - 2016}{Principal Engineer}{Advanced Technology Group
+  (ATG) for Cloud and Open Source, HPE}
 {Incubate and influence new technology adoption across HPE with an
   emphasis on Cloud focused business units.}
-{Kubernetes, CoreOS, nesting Container \& VM env's, System Mgmt \& Mon, Ansible, ELK, Load Balancing, IPv6}
+{Kubernetes, CoreOS, nesting Container \& VM env's, System Mgmt \&
+  Mon, Ansible, ELK, Load Balancing, IPv6.}
 
 %
 \cveventtwo{2011 - 2014}{Engineering Manager}{Monitoring, HP Cloud, Hewlett-Packard}
 {Lead the design and operation of HP's Public Cloud (internal) monitoring and
   customer Monitoring-aaS.}
 {Cloud Native \& DevOps, OpenStack( Nova, Swift, Glance, pre-Neutron
-  ), Chef, collectd, RabbitMQ, Icinga, HAProxy}
+  ), Chef, collectd, RabbitMQ, Icinga, HAProxy.}
 
 %
-\cveventtwo{2005 - 2011}{Principal Engineer}{HP Music \& Melodeo}
+\cveventtwo{2005 - 2011}{Principal Engineer}{Melodeo Inc. \& HP Music, Hewlett-Packard}
 {Responsible for multiple, back-end components in the Melodeo service:
   music ingestion, transcoding, and delivery.}
 {Amazon-WS( EC2, S3, SQS, EMR, RDS ), Java, Python, Ruby, elastic
-  transcoding, music CODEC's, Hadoop/HIVE}
+  transcoding, music CODEC's, Hadoop/HIVE.}
 
 %
 \cveventtwo{2003 - 2005}{Principal Engineer}{Continuous Computing}
 {Developed ARM \& x86 firmware/BIOS for multiple lines of blade
   servers.  Chassis managment module dev.}
 {ARM \& x86 assembly, PXE, embedded Linux \& kernel development,
-  remote GDB, BusyBox, Python, GCC x-compile}
+  remote GDB, BusyBox, Python, GCC x-compile.}
 
 \cveventtwo{1995 - 2003}{Software Engineer}{\it various employeers}
            {Voice over IP, CPLD Partition, Place, \& Route (CAD/EDA),
              Criminal Link Analysis, Remote Medical Coding.}
-           {C++, CORBA, distributed \& network programming, heuristic
-             algorithms, Data Center scale networking.}
+           {C++, Java, CORBA, distributed \& network programming,
+             heuristic algorithms, Data Center scale networking.}
 
 %---------------------------------------------------------------------------------------
 %	Projects SECTION
@@ -472,16 +498,18 @@ Networking and Messaging.
            {Bachelor of Science, Computer Engineering}
            {Valparaiso University}
            {Ada language research enabling cross-host communication
-             using language primitives - drove changes in ADA95}
+             using language primitives - drove changes in ADA95.}
            {Focus on embedded system design (68k), networking, and
-             VLSI design}
+             VLSI design.}
 
 \cveventtwo{1993-1995}
            {Masters of Science, Electrical Engineering {\it
-               unconferred} }
+               (unconferred)} }
            {Universities of Colorado \& Houston}
-           {aaa}
-           {bbb}
+           {Research:  ``Multi-threaded Processor Cache Coherency'',
+             ``CPLD Design for Test'', developed Embedded Sys. course.}
+           {Computer Architecture, Digital Design, Digital Signal
+             Processing (DSP), CMOS/VLSI Design, Neural Networks.}
 
 %--------------------------------------------------------------------------------------------------
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth)
@@ -489,7 +517,12 @@ Networking and Messaging.
 
 \null
 \vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.elfwerks.org/ericg} $\cdot$ \textcolor{white}{github.com/egustafson}}}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut
+    \small \textcolor{white}{\bf www.linkedin.com/in/ericggustafson} }}
+
+
+%    \textcolor{white}{www.elfwerks.org/ericg} $\cdot$
+%    \textcolor{white}{github.com/egustafson}}}
 
 
 
