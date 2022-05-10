@@ -234,6 +234,19 @@
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
 
+% creates a stretched box as cv entry headline with no bullet sections below (and no hrule)
+% param 1:	event time i.e. 2014 or 2011-2014 etc.
+% param 2:	event name (what did you do?)
+% param 3:	institution (where did you work / study)
+
+\newcommand{\cveventzero}[3]
+{
+\begin{tabular*}{1\textwidth}{p{6.15in}  x{1in}}
+	\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
+\end{tabular*}
+
+}
+
 % creates a stretched box as cv entry headline followed by two paragraphs about
 % the work you did
 % param 1:	event time i.e. 2014 or 2011-2014 etc.
@@ -255,30 +268,6 @@
   $\cdot$ #4\\[3pt]
 
 }
-
-% creates a stretched box as cv entry headline followed by two paragraphs about
-% the work you did
-% param 1:	event time i.e. 2014 or 2011-2014 etc.
-% param 2:	event name (what did you do?)
-% param 3:	institution (where did you work / study)
-% param 4:	what was your position
-% param 5:	some words about your contributions
-%
-%\newcommand{\cveventtwo}[5]
-%{
-%
-%\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
-%	\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
-%\end{tabular*}
-%
-%\vspace{-8pt}
-%\textcolor{softcol}{\hrule}
-%\vspace{6pt}
-%
-%  $\cdot$ #4\\[3pt]
-%  $\cdot$ #5\\[6pt]
-%
-%}
 
 % creates a stretched box as cv entry headline followed by two paragraphs about
 % the work you did
@@ -402,15 +391,14 @@
 \metasection{Colorado Springs, CO, USA}
 %            {\textbf{Role:} Software Architect and Technical Leader}
             {\textbf{Fields:} Software Architecture and Development,
-              Cloud, Monitoring, Networking, DevOps}
+              Cloud Native, Monitoring, Networking, DevOps}
 \metasection{www.elfwerks.org/ericg}
-            {\textbf{Cloud:} Microservices, Kubernetes, Rancher,
-              CoreOS, OpenStack, AWS, Google}
+            {\textbf{Cloud:} Microservices, Kubernetes, Helm, Ansible, Terraform,
+              OpenStack, AWS, Google Cloud}
 \metasection{ericg@elfwerks.org}
-            {\textbf{Technologies:} Go, Python, Java, C/C++, Ansible,
-              Chef, Nagios/Icinga, ELK, Hadoop, Kafka, RabbitMQ, ZeroMQ}
+            {\textbf{Technologies:} Go, Python, Java, C/C++, gRPC, etcd, ELK Stack, Hadoop, Kafka, RabbitMQ, ZeroMQ}
 \metasection{+1.719.359.4112}
-            {\textbf{Leadership:} Transformational Idealist, Mentor,
+            {\textbf{Leadership:} Seasoned Technologist, Mentor,
               Hands-on, Indirect Influencer, experienced People and
               Project Manager}
 \vspace{-2pt}
@@ -425,8 +413,8 @@
 \vspace{-6pt}
 \cvsection{Summary}
 Agile, detail oriented, hands-on technology leader with excellent
-communication skills.  Extensive experience in Cloud native
-development and operation, DevOps, System Management, Monitoring,
+communication skills.  Extensive experience in cloud native
+development and operations, DevOps, System Management, Monitoring,
 Networking and Messaging.
 
 %============================================================================%
@@ -440,19 +428,34 @@ Networking and Messaging.
 %----------------------------------------------------------------------------------------
 \cvsection{Professional Experience}
 
+\cveventtwo{2020 - present}{Sr. Principal Engineer}{Key/Value Store, Viasat}
+{A highly-available, cloud native, service that stores shared state for a multi-site, real-time distributed system.}
+{Took this late start, but critical project from concept to operation while conforming to Viasat's next-gen ground system.}
+
+\cveventtwo{2018 - 2020}{Platform Lead}{Monitoring, Broadband Networking, Viasat}
+{Converged a set of disjoint monitoring teams (i.e.: Agile ``Products'') into a cohesive Platform (set of teams).}
+{Worked with existing leads. Provided technical mentoring. Identified organizational restructuring. Installed final lead.}
+
 %
-\cveventthree{2016 - 2017}{Architect}{Software Defined \& Cloud Group, Hewlett Packard Enterprise (HPE)}
-{Design and development of HPE's project 'New Stack' -- a continuation of the R\&D effort done under the ATG.}
-{Kubernetes connector -- software networking technology that enables communication between K8s clusters.}
-{Assess and set technical direction for components in 'New Stack', including API Gateway, Monitoring, and Analytics.}
+\cveventone{2017 - 2018}{Member of Technical Staff}{Global Infrastructure, Viasat}
+{Advised on the selection of cloud technologies and the use of public clouds for Viasat's next
+ generation ground system.}
+
+%
+\cveventtwo{2016 - 2017}{Architect}{Software Defined \& Cloud Group (SDCG), Hewlett Packard Enterprise (HPE)}
+{Set technical direction for components of 'New Stack' (now, HPE Greenlake): API Gateway, Monitoring, Analytics.}
+{Kubernetes connector for New Stack: software networking technology enabling communication between K8s clusters.}
+
+%{Design and development of HPE's project 'New Stack' -- a continuation of the R\&D effort done under the ATG.}
+%{Assess and set technical direction for components in 'New Stack', including API Gateway, Monitoring, and Analytics.}
 
 %
 \cveventtwo{2014 - 2016}{Principal Engineer}{Advanced Technology Group
   (ATG) for Cloud and Open Source, HPE}
 {Incubate and influence new technology adoption across HPE with an
-  emphasis on Cloud focused business units.}
+  emphasis on the Cloud focus of SDCG.}
 {Kubernetes, CoreOS, nesting Container \& VM env's, System Mgmt \&
-  Mon, Ansible, ELK, Load Balancing, IPv6.}
+  Monitoring, Network Load Balancing, IPv6.}
 
 %
 \cveventtwo{2011 - 2014}{Engineering Manager}{Monitoring, HP Cloud, Hewlett-Packard}
@@ -469,68 +472,65 @@ Networking and Messaging.
   transcoding, music CODEC's, Hadoop/HIVE.}
 
 %
-\cveventtwo{2003 - 2005}{Principal Engineer}{Continuous Computing}
-{Developed ARM \& x86 firmware/BIOS for multiple lines of blade
-  servers.  Chassis managment module dev.}
-{ARM \& x86 assembly, PXE, embedded Linux \& kernel development,
-  remote GDB, BusyBox, Python, GCC x-compile.}
-
-\cveventtwo{1995 - 2003}{Software Engineer}{\it various employeers}
-           {Voice over IP, CPLD Partition, Place, \& Route (CAD/EDA),
+\cveventtwo{1995 - 2005}{Software Engineer}{\it various employers}
+           {Voice over IP, Embedded Linux, Firmware/BIOS, CAD/EDA Software,
              Criminal Link Analysis, Remote Medical Coding.}
-           {C++, Java, CORBA, distributed \& network programming,
-             heuristic algorithms, Data Center scale networking.}
+           {C++, Python, Java, ARM \& x86 asm, GCC x-compile, CORBA,
+             distributed \& network programming, heuristic algorithms.}
 
-%---------------------------------------------------------------------------------------
-%	Projects SECTION
-%--------------------------------------------------------------------------------------
-%\cvsection{Select Projects}
 %
-%%
-%\cveventtwo{July 2014 - Present}{Lead Developer}{Glide, the Go package manager}{Developed core dependency management features which have been re-used by other projects}{Built the website, documentation, and install mechanism}
+%\cveventtwo{2003 - 2005}{Principal Engineer}{Continuous Computing}
+%{Developed ARM \& x86 firmware/BIOS for multiple lines of blade
+%  servers.  Chassis managment module dev.}
+%{ARM \& x86 assembly, PXE, embedded Linux \& kernel development,
+%  remote GDB, BusyBox, Python, GCC x-compile.}
+
 %
-%%\textcolor{softcol}{\hrule}
-%
-%%
-%\cveventone{March 2013 - Present}{Core Developer}{HTML5 Parser / Writer for PHP}{Built and shipped most popular HTML5 library for PHP}
-%
+%\cveventtwo{1995 - 2003}{Software Engineer}{\it various employers}
+%           {Voice over IP, CPLD Partition, Place, \& Route (CAD/EDA),
+%             Criminal Link Analysis, Remote Medical Coding.}
+%           {C++, Java, CORBA, distributed \& network programming,
+%             heuristic algorithms, Data Center scale networking.}
+
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %--------------------------------------------------------------------------------------
 \cvsection{Education}
 
-%
-\cveventtwo{1989 - 1993}
-           {Bachelor of Science, Computer Engineering}
-           {Valparaiso University}
-           {Ada language research enabling cross-host communication
-             using language primitives - drove changes in ADA95.}
-           {Focus on embedded system design (68k), networking, and
-             VLSI design.}
+\cveventzero{1989 - 1993}
+            {Bachelor of Science, Computer Engineering}
+            {Valparaiso University}
 
-\cveventtwo{1993-1995}
-           {Masters of Science, Electrical Engineering {\normalfont (unconferred)} }
-           {{\it Universities of Colorado \& Houston}}
-           {Research:  ``Multi-threaded Processor Cache Coherency'',
-             ``CPLD Design for Test'', developed Embedded Sys. course.}
-           {Computer Architecture, Digital Design, Digital Signal
-             Processing (DSP), CMOS/VLSI Design, Neural Networks.}
+\cveventzero{1993 - 1995}
+            {Masters of Science, Electrical Engineering {\normalfont (unconferred)} }
+            {{\it Universities of Colorado \& Houston}}
+
+%
+%\cveventtwo{1989 - 1993}
+%           {Bachelor of Science, Computer Engineering}
+%           {Valparaiso University}
+%           {Ada language research enabling cross-host communication
+%             using language primitives - drove changes in ADA95.}
+%           {Focus on embedded system design (68k), networking, and
+%             VLSI design.}
+
+%\cveventtwo{1993-1995}
+%           {Masters of Science, Electrical Engineering {\normalfont (unconferred)} }
+%           {{\it Universities of Colorado \& Houston}}
+%           {Research:  ``Multi-threaded Processor Cache Coherency'',
+%             ``CPLD Design for Test'', developed Embedded Sys. course.}
+%           {Computer Architecture, Digital Design, Digital Signal
+%             Processing (DSP), CMOS/VLSI Design, Neural Networks.}
 
 %--------------------------------------------------------------------------------------------------
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth)
 %--------------------------------------------------------------------------------------------------
 
 \null
-\vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut
-    \small \textcolor{white}{\bf www.linkedin.com/in/ericggustafson} }}
+%\vspace*{\fill}
 
-
-%    \textcolor{white}{www.elfwerks.org/ericg} $\cdot$
-%    \textcolor{white}{github.com/egustafson}}}
-
-
-
+\hspace{-0.25\linewidth}\colorbox{white}{\makebox[1.5\linewidth][c]{\mystrut
+    \small \textcolor{bgcol}{\bf www.linkedin.com/in/ericggustafson} }}
 
 %============================================================================%
 %
